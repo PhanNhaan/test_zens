@@ -73,7 +73,7 @@ router.post('/vote', (req, res) => {
 
     // add cookie
     votedJokes.push(id);
-    res.cookie('votedJokes', JSON.stringify(votedJokes), { maxAge: 86400000 });
+    res.cookie('votedJokes', JSON.stringify(votedJokes), { maxAge: 86400000, sameSite: 'None', secure: true });
     res.json({ message: 'Vote recorded successfully.' });
 });
 
