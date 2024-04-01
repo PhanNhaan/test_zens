@@ -1,0 +1,23 @@
+.joke {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+
+.joke {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 250px;
+}
+
+.joke-text {
+    text-align: center;
+}
