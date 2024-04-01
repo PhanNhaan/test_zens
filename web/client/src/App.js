@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from './axios';
 import Joke from './components/Joke';
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,7 +9,7 @@ function App() {
 
   const fetchNewJoke = async () => {
     try {
-      const response = await axios.get('https://test-zens-fms3.onrender.com/api/jokes/joke', {
+      const response = await axios.get('/api/jokes/joke', {
         withCredentials: true
       });
       setJoke(response.data);

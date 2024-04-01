@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+import axios from "../axios";
 import "./joke.css"
 
 import Button from 'react-bootstrap/Button';
@@ -8,7 +8,7 @@ function Joke({ joke, id, fetchNewJoke }) {
     const handleVote = async (vote) => {
 
         try {
-            await axios.post('https://test-zens-fms3.onrender.com/api/jokes/vote', { id, vote }, {
+            await axios.post('/api/jokes/vote', { id, vote }, {
                 withCredentials: true
             });
             fetchNewJoke();
