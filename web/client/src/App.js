@@ -9,7 +9,7 @@ function App() {
 
   const fetchNewJoke = async () => {
     try {
-      const response = await axios.get('/api/jokes/joke', {
+      const response = await axios.get('https://test-zens-fms3.onrender.com/api/jokes/joke', {
         withCredentials: true
       });
       setJoke(response.data);
